@@ -8,19 +8,20 @@ import './App.css'
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
-function App() {
+function App() {  
+  
   return (
     <Router>
       <Layout style={{ minHeight: '100vh' }}>
-        <Header style={{ background: '#00aaff', padding: 0 }}>
-          <div style={{ display: 'flex', alignItems: 'center', maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <Title style={{ color: '#fff', margin: 0 }} level={2}><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>PokéApp</Link></Title>
+        <Header style={{ background: '#222224', padding: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', maxWidth: '1500px', margin: '0 auto', padding: '0 20px' }}>
+            <Title style={{ color: '#fff', margin: 0, textAlign: 'left'}} level={2}><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>PokéApp</Link></Title>
             <Menu 
               className="custom-header-menu"
               theme="dark" 
               mode="horizontal" 
               defaultSelectedKeys={['1']}
-              style={{ background: 'transparent', color: '#fff' }}
+              style={{ background: 'transparent', color: '#fff', textAlign: 'left' }}
               >
               <Menu.Item key="1" style={{ color: '#fff' }}>
                 <Link to="/">Home</Link>
