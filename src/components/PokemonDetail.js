@@ -2,6 +2,7 @@ import React from 'react';
 import { useApi } from '../utils/useApi';
 import { Card } from 'antd';
 
+
 // Función para capitalizar la primera letra de una cadena
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -43,26 +44,36 @@ function PokemonDetail(props) {
     return <div>Error: {error.message}</div>;
   }
 
-  const cardColor = getCardColor(); // Obten el color de manera dinamica
+  const cardColor = getCardColor();
 
   const cardStyle = {
     width: 400,
     borderRadius: 10,
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    backgroundColor: cardColor, // cardColor pasa el color en base al tipo de Pokémon
+    backgroundColor: cardColor, // Usamos cardColor para desplegar color en base al tipo de Pokémon
     border: '10px solid black',
   };
 
   const titleStyle = {
-    fontSize: '30px',
+    fontSize: '45px',
     textAlign: 'center',
-    fontFamily: 'Press Start 2P, cursive', // DEFINIR EL FONT PENDIENTE
-    marginTop: '10px', 
+    fontFamily: 'Pixeboy, sans-serif', 
+    margin: '15px', 
+  };  
+
+  const infoStyle = {
+    fontFamily: "'DePixel', sans-serif",
+    fontSize: "0.9em", 
+    lineHeight: "1.2", 
+    margin: "0.9em 0", 
   };  
 
 
   return (
+    
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <link href="https://fonts.cdnfonts.com/css/pixeboy" rel="stylesheet"></link>
+      <link href="https://fonts.cdnfonts.com/css/depixel" rel="stylesheet"></link>
       <Card 
         style={cardStyle} 
         cover={<img alt={pokemon.name} src={pokemon.sprites?.front_default} />}
@@ -71,11 +82,11 @@ function PokemonDetail(props) {
           title= {<h1 style={titleStyle}>{pokemon.name.toUpperCase()}</h1>}
           description={
             <>
-              <h4><strong>Height:</strong> {pokemon.height/10} m</h4>
-              <h4><strong>Weight:</strong> {pokemon.weight} kg</h4>
-              {/* Usamos funcinoaes definidas para capitalizar los tipo y habilidades */}
-              <h4><strong>Type:</strong> {capitalizeEachWord(pokemon.types.map(type => type.type.name).join(', '))}</h4>
-              <h4><strong>Abilities:</strong> {capitalizeEachWord(pokemon.abilities.map(ability => ability.ability.name).join(', '))}</h4>
+              <h4 style={infoStyle}><strong>Height:</strong> {pokemon.height/10} m</h4>
+              <h4 style={infoStyle}><strong>Weight:</strong> {pokemon.weight/10 }kg</h4>
+              {/* Usamos funciones definidas para capitalizar el type y las habilidades */}
+              <h4 style={infoStyle}><strong>Type:</strong> {capitalizeEachWord(pokemon.types.map(type => type.type.name).join(', '))}</h4>
+              <h4 style={infoStyle}><strong>Abilities:</strong> {capitalizeEachWord(pokemon.abilities.map(ability => ability.ability.name).join(', '))}</h4>
             </>
           }
         />

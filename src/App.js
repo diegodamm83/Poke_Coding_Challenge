@@ -15,7 +15,8 @@ function App() {
       <Layout style={{ minHeight: '100vh' }}>
         <Header style={{ background: '#222224', padding: 0 }}>
           <div style={{ display: 'flex', alignItems: 'center', maxWidth: '1500px', margin: '0 auto', padding: '0 20px' }}>
-            <Title style={{ color: '#fff', margin: 0, textAlign: 'left'}} level={2}><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>PokéApp</Link></Title>
+          <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
+            <Title style={{ color: '#fff', margin: 0, textAlign: 'left', fontFamily: "'Pokemon Solid', sans-serif", letterSpacing: '0.22rem'}} level={2}><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>PokéApp</Link></Title>
             <Menu 
               className="custom-header-menu"
               theme="dark" 
