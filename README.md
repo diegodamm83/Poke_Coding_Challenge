@@ -9,6 +9,6 @@ Welcome to PokéApp, a simple yet effective React application that helps users v
 - Arreglé llamada al api para desplegar datos
 - Nuevo archivo “useApi.js" para hacer llamadas al api con hooks
 - Arreglé feature de Filter para ordenar Pokémones en orden alfabético o por nombre
-- Agregué propiedades a PokemonDetails y agregué funciones para que los datos se vean más limpios
+- Agregué funciones a PokemonDetails para que los datos se vean más limpios
 - Cambio de colores y fonts para reforzar temática Pokémon
 - Hosting de página en github pages https://github.com/diegodamm83/Poke_Coding_Challenge
