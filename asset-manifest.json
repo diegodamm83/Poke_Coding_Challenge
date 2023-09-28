@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Poke_Coding_Challenge/static/css/main.86db907e.css",
+    "main.js": "/Poke_Coding_Challenge/static/js/main.9e0e58b0.js",
+    "static/js/787.3e4b36fc.chunk.js": "/Poke_Coding_Challenge/static/js/787.3e4b36fc.chunk.js",
+    "index.html": "/Poke_Coding_Challenge/index.html",
+    "main.86db907e.css.map": "/Poke_Coding_Challenge/static/css/main.86db907e.css.map",
+    "main.9e0e58b0.js.map": "/Poke_Coding_Challenge/static/js/main.9e0e58b0.js.map",
+    "787.3e4b36fc.chunk.js.map": "/Poke_Coding_Challenge/static/js/787.3e4b36fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86db907e.css",
+    "static/js/main.9e0e58b0.js"
+  ]
+}
